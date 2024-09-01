@@ -1,5 +1,7 @@
 package com.eazybytes.loans.entity;
 
+import java.time.LocalDateTime;
+
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
@@ -16,7 +18,7 @@ public class BaseEntity {
 
     @CreatedDate
     @Column(updatable = false)
-    private String createAt;
+    private LocalDateTime createdAt;
 
     @CreatedBy
     @Column(updatable = false)
@@ -28,6 +30,6 @@ public class BaseEntity {
 
     @LastModifiedDate
     @Column(insertable = false)
-    private String updatedAt;
+    private LocalDateTime updatedAt;
 
 }
